@@ -32,6 +32,16 @@ struct ContentView: View {
             }
             
             Tab {
+                JournalView()
+            } label: {
+                VStack {
+                    Image(systemName: "square.and.pencil")
+                        .foregroundStyle(Color.orange)
+                    Text("journal")
+                }
+            }
+            
+            Tab {
                 SettingsView()
             } label: {
                 VStack {

@@ -10,6 +10,16 @@ import SwiftData
 
 struct HabitView: View {
     var body: some View {
-        Text("Habit view")
+        
+        NavigationStack {
+            List {
+                ListStandardRow(title: "Sleep", detail: "Routine", image: Image(systemName: "bed.double"))
+                ListStandardRow(title: "Steps", detail: "Workout", image: Image(systemName: "figure.walk"))
+                ListStandardRow(title: "Cycling", detail: "Workout", image: Image(systemName: "bicycle"))
+                ListStandardRow(title: "Read a book", detail: "Reading & Journal", image: Image(systemName: "book"))
+            }
+            .navigationTitle("Most popular habits")
+            .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }

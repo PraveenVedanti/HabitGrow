@@ -8,7 +8,6 @@
 import SwiftUI
 import SwiftData
 
-
 struct DashboardView: View {
     var body: some View {
         Text("Dashboard view")
