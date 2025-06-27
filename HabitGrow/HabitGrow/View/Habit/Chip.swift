@@ -29,15 +29,16 @@ public struct Chip: View {
         HStack(spacing: 8.0) {
             image
             Text(title)
+                .font(Font.subheadline)
+                .fontWeight(.regular)
         }
         .onTapGesture {
             
         }
         .padding()
         .background(
-            Capsule()
-                .stroke(Color.gray, lineWidth: 1.0)
-                .shadow(radius: 4.0)
+            RoundedRectangle(cornerRadius: 16.0)
+                .stroke(color ?? Color.gray, lineWidth: 1)
         )
     }
 }

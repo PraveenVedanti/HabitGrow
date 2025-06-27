@@ -1,0 +1,29 @@
+{
+  "categories":[
+               {
+               "id": 1,
+               "name":"Favourites",
+               "imageName":"heart"
+               },
+               {
+               "id": 2,
+               "name":"Fitness",
+               "imageName":"figure.walk"
+               },
+               {
+               "id": 3,
+               "name":"Reading & Journal",
+               "imageName":"book"
+               },
+               {
+               "id": 4,
+               "name":"Digital wellness",
+               "imageName":"macbook.and.iphone"
+               },
+               {
+               "id": 5,
+               "name":"Life style",
+               "imageName":"house"
+               }
+               ]
+}
