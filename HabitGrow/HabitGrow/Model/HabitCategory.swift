@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct HobbyCategory {
+public struct HabitCategory {
     
-    private let id: String
-    private let name: String
-    private let hobbies: [Hobby]
+    let id: String
+    let name: String
+    let habits: [Habit]
     
     public init(
         id: String,
         name: String,
-        hobbies: [Hobby]
+        habits: [Habit]
     ) {
         self.id = id
         self.name = name
-        self.hobbies = hobbies
+        self.habits = habits
     }
 }
