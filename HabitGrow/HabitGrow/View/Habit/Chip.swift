@@ -10,35 +10,45 @@ import SwiftUI
 public struct Chip: View {
     
     private let title: String
-    private let image: Image?
-    private let color: Color?
+    private let imageName: String?
+    private let isSelected: Bool
+    private let onTap: () -> Void
     
-    // @State private var selectedCategory: HabitCategory
+    @State private var shoud = false
+    @State private var selectedCategory: HabitCategory
     
     public init(
         title: String,
-        image: Image? = nil,
-        color: Color? = .clear
+        imageName: String? = nil,
+        selectedCategory: HabitCategory,
+        isSelected: Bool,
+        onTap: @escaping () -> Void
     ) {
         self.title = title
-        self.image = image
-        self.color = color
+        self.imageName = imageName
+        self.selectedCategory = selectedCategory
+        self.isSelected = isSelected
+        self.onTap = onTap
     }
     
     public var body: some View {
         HStack(spacing: 8.0) {
-            image
+            if let imageName {
+                Image(systemName: imageName)
+            }
+            
             Text(title)
                 .font(Font.subheadline)
                 .fontWeight(.regular)
         }
         .onTapGesture {
-            
+            onTap()
         }
         .padding()
         .background(
             RoundedRectangle(cornerRadius: 16.0)
-                .stroke(color ?? Color.gray, lineWidth: 1)
+                .stroke(Color.gray, lineWidth: 1)
+                .fill(isSelected ? Color.gray.opacity(0.4) : Color.clear)
         )
     }
 }

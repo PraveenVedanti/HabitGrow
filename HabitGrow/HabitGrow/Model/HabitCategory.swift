@@ -7,19 +7,22 @@
 
 import Foundation
 
-public struct HabitCategory: Codable {
+public struct HabitCategory: Codable, Identifiable {
     
-    let id: Int
+    public let id: Int
     let name: String
     let imageName: String
+    let description: String
     
     public init(
         id: Int,
         name: String,
         imageName: String,
+        description: String
     ) {
         self.id = id
         self.name = name
         self.imageName = imageName
+        self.description = description
     }
 }

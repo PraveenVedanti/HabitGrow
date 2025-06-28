@@ -10,7 +10,7 @@ import Foundation
 class FileManager {
     private static let categoryFileName = "category"
     
-    static func getCategory() -> Data? {
+    static func getCategories() -> Data? {
         return getData(filename: categoryFileName)
     }
     

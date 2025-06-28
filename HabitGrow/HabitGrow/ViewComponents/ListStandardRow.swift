@@ -11,24 +11,24 @@ public struct ListStandardRow: View {
     
     private let title: String?
     private let detail: String?
-    private let image: Image?
+    private let imageName: String?
     
     public init(
         title: String? = nil,
         detail: String? = nil,
-        image: Image? = nil,
+        imageName: String? = nil,
     ) {
         self.title = title
         self.detail = detail
-        self.image = image
+        self.imageName = imageName
     }
     
     public var body: some View {
         
         VStack(alignment: .leading) {
             HStack(spacing: 8.0) {
-                if let image {
-                    image
+                if let imageName {
+                    Image(systemName: imageName)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 20, height: 20)

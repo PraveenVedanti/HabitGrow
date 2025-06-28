@@ -10,24 +10,33 @@ import SwiftData
 
 struct HabitView: View {
     
-    let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: 3)
+   @StateObject private var categoriesViewModel = HabitCategoryViewModel()
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 24.0) {
+                
+                // Categories selection view
                 ScrollView(.horizontal, showsIndicators: false) {
                     chipView
                 }
                 
-                ScrollView(.vertical, showsIndicators: false) {
-                    LazyVGrid(columns: columns) {
-                        SemiCard(title: "Sleep", image: "bed.double")
-                        SemiCard(title: "Steps", image: "figure.walk")
-                        SemiCard(title: "Cycling", image: "bicycle")
-                        SemiCard(title: "Read a book", image: "book")
-                    }
+                // Category description view
+                if let description = categoriesViewModel.selectedCategory?.description {
+                    Text(description)
+                        .font(Font.title3)
+                        .fontWeight(.medium)
                 }
-                .padding(.bottom)
+                
+                // Habits view
+                List {
+                    ListStandardRow(title: "Sleep", imageName: "bed.double")
+                    ListStandardRow(title: "Steps", imageName: "figure.walk")
+                    ListStandardRow(title: "Cycling", imageName: "bicycle")
+                    ListStandardRow(title: "Read a book", imageName: "book")
+                }
+                .listRowSpacing(12.0)
+                .listStyle(.plain)
             }
             .navigationTitle(LocalizedStrings.habitTitle)
             .padding()
@@ -36,15 +45,17 @@ struct HabitView: View {
     
     private var chipView: some View {
         HStack(spacing: 16.0) {
-            Chip(title: "Favourites", image: Image(systemName: "heart"), color: Color.orange)
-            Chip(title: "Fitness", image: Image(systemName: "figure.walk"), color: Color.green)
-            Chip(title: "Reading & Journal", image: Image(systemName: "book"), color: Color.brown)
-            Chip(title: "Digital wellness", image: Image(systemName: "macbook.and.iphone"), color: Color.blue)
+            ForEach(categoriesViewModel.categories) { category in
+                Chip(
+                    title: category.name,
+                    imageName: category.imageName,
+                    selectedCategory: category,
+                    isSelected: categoriesViewModel.selectedCategory?.id == category.id
+                ) {
+                    categoriesViewModel.selectedCategory = category
+                }
+            }
         }
-    }
-    
-    private func getCategoryData() {
-        
     }
 }
 

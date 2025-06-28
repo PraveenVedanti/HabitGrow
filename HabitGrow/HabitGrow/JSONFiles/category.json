@@ -1,29 +1,32 @@
-{
-  "categories":[
-               {
-               "id": 1,
-               "name":"Favourites",
-               "imageName":"heart"
-               },
-               {
-               "id": 2,
-               "name":"Fitness",
-               "imageName":"figure.walk"
-               },
-               {
-               "id": 3,
-               "name":"Reading & Journal",
-               "imageName":"book"
-               },
-               {
-               "id": 4,
-               "name":"Digital wellness",
-               "imageName":"macbook.and.iphone"
-               },
-               {
-               "id": 5,
-               "name":"Life style",
-               "imageName":"house"
-               }
-               ]
-}
+[
+    {
+        "id": 1,
+        "name":"Favourites",
+        "imageName":"heart",
+        "description": "These are your favourite habits"
+    },
+    {
+        "id": 2,
+        "name":"Fitness",
+        "imageName":"figure.walk",
+        "description": "Fitness related habits"
+    },
+    {
+        "id": 3,
+        "name":"Reading & Journal",
+        "imageName":"book",
+        "description": "Reading related habits"
+    },
+    {
+        "id": 4,
+        "name":"Digital wellness",
+        "imageName":"macbook.and.iphone",
+        "description": "Digital wellness habits"
+    },
+    {
+        "id": 5,
+        "name":"Life style",
+        "imageName":"house",
+        "description": "Lifestyle improvement habits"
+    }
+]

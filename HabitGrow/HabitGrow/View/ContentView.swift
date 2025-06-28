@@ -26,7 +26,6 @@ struct ContentView: View {
             } label: {
                 VStack {
                     Image(systemName: "figure.run")
-                        .foregroundStyle(Color.orange)
                     Text("habit")
                 }
             }
