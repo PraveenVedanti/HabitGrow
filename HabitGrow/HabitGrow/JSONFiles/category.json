@@ -3,30 +3,104 @@
         "id": 1,
         "name":"Favourites",
         "imageName":"heart",
-        "description": "These are your favourite habits"
+        "description": "These are your favourite habits",
+        "habits": [
+            {
+                "id": 101,
+                "name": "Walking",
+                "imageName": "figure.walk"
+            },
+            {
+                "id": 102,
+                "name": "Running",
+                "imageName": "figure.run"
+            },
+            {
+                "id": 103,
+                "name": "Cycling",
+                "imageName": "bicycle"
+            }
+        ]
     },
     {
         "id": 2,
         "name":"Fitness",
         "imageName":"figure.walk",
-        "description": "Fitness related habits"
+        "description": "Fitness related habits",
+        "habits": [
+            {
+                "id": 201,
+                "name": "Walking",
+                "imageName": "figure.walk"
+            },
+            {
+                "id": 202,
+                "name": "Running",
+                "imageName": "figure.run"
+            },
+            {
+                "id": 203,
+                "name": "Cycling",
+                "imageName": "figure.outdoor.cycle"
+            },
+            {
+                "id": 204,
+                "name": "Swim",
+                "imageName": "figure.pool.swim"
+            },
+            {
+                "id": 205,
+                "name": "Yoga",
+                "imageName": "figure.yoga"
+            },
+            {
+                "id": 206,
+                "name": "Basketball",
+                "imageName": "figure.basketball"
+            },
+            {
+                "id": 207,
+                "name": "Exercise",
+                "imageName": "dumbbell"
+            },
+            {
+                "id": 208,
+                "name": "Hiking",
+                "imageName": "figure.hiking"
+            },
+            {
+                "id": 209,
+                "name": "Surfing",
+                "imageName": "figure.surfing"
+            },
+            {
+                "id": 210,
+                "name": "Skis",
+                "imageName": "skis"
+            }
+        ]
     },
     {
         "id": 3,
-        "name":"Reading & Journal",
-        "imageName":"book",
-        "description": "Reading related habits"
-    },
-    {
-        "id": 4,
-        "name":"Digital wellness",
-        "imageName":"macbook.and.iphone",
-        "description": "Digital wellness habits"
-    },
-    {
-        "id": 5,
         "name":"Life style",
         "imageName":"house",
-        "description": "Lifestyle improvement habits"
+        "description": "Lifestyle improvement habits",
+        "habits": [
+            {
+                "id": 301,
+                "name": "Read a book",
+                "imageName": "book"
+            },
+            {
+                "id": 302,
+                "name": "Take medicines",
+                "imageName": "pill"
+            },
+            {
+                "id": 303,
+                "name": "Drink water",
+                "imageName": "waterbottle"
+            }
+        ]
     }
 ]

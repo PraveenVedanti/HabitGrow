@@ -29,11 +29,8 @@ struct HabitView: View {
                 }
                 
                 // Habits view
-                List {
-                    ListStandardRow(title: "Sleep", imageName: "bed.double")
-                    ListStandardRow(title: "Steps", imageName: "figure.walk")
-                    ListStandardRow(title: "Cycling", imageName: "bicycle")
-                    ListStandardRow(title: "Read a book", imageName: "book")
+                List(categoriesViewModel.selectedCategory?.habits ?? []) { habit  in
+                    ListStandardRow(title: habit.name, imageName: habit.imageName)
                 }
                 .listRowSpacing(12.0)
                 .listStyle(.plain)

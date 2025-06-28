@@ -13,16 +13,19 @@ public struct HabitCategory: Codable, Identifiable {
     let name: String
     let imageName: String
     let description: String
+    let habits: [Habit]
     
     public init(
         id: Int,
         name: String,
         imageName: String,
-        description: String
+        description: String,
+        habits: [Habit],
     ) {
         self.id = id
         self.name = name
         self.imageName = imageName
         self.description = description
+        self.habits = habits
     }
 }

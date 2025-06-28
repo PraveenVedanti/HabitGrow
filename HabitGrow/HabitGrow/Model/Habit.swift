@@ -7,19 +7,19 @@
 
 import Foundation
 
-public struct Habit {
+public struct Habit: Codable, Identifiable {
 
-    let id: String
+    public let id: Int
     let name: String
-    let categories: [HabitCategory]
+    let imageName: String
     
     public init(
-        id: String,
+        id: Int,
         name: String,
-        categories: [HabitCategory]
+        imageName: String
     ) {
         self.id = id
         self.name = name
-        self.categories = categories
+        self.imageName = imageName
     }
 }
