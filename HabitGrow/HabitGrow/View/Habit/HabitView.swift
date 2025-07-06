@@ -28,12 +28,8 @@ struct HabitView: View {
                         .fontWeight(.medium)
                 }
                 
-                // Habits view
-                List(categoriesViewModel.selectedCategory?.habits ?? []) { habit  in
-                    ListStandardRow(title: habit.name, imageName: habit.imageName)
-                }
-                .listRowSpacing(12.0)
-                .listStyle(.plain)
+                habitsListView
+              
             }
             .navigationTitle(LocalizedStrings.habitTitle)
             .padding()
@@ -54,8 +50,16 @@ struct HabitView: View {
             }
         }
     }
-}
-
-struct LocalizedStrings {
-    static let habitTitle = NSLocalizedString("Habits", comment: "Habits tab item title")
+    
+    private var habitsListView: some View {
+        NavigationStack {
+            List(categoriesViewModel.selectedCategory?.habits ?? []) { habit  in
+                NavigationLink(destination: HabitDetailView(habit: habit)) {
+                    ListStandardRow(title: habit.name, imageName: habit.imageName)
+                }
+            }
+            .listRowSpacing(12.0)
+            .listStyle(.plain)
+        }
+    }
 }

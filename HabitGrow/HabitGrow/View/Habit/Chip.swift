@@ -48,7 +48,7 @@ public struct Chip: View {
         .background(
             RoundedRectangle(cornerRadius: 16.0)
                 .stroke(Color.gray, lineWidth: 1)
-                .fill(isSelected ? Color.gray.opacity(0.4) : Color.clear)
+                .fill(isSelected ? Color.teal.opacity(0.25) : Color.clear)
         )
     }
 }
