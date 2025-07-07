@@ -35,11 +35,11 @@ struct SegmentBar: View {
                     .padding(.horizontal, 12)
                     .background(
                         RoundedRectangle(cornerRadius: 10)
-                            .fill(selectedID == segment.id ? Color.gray.opacity(0.4) : Color.gray.opacity(0.1))
+                            .fill(selectedID == segment.id ? Color.teal.opacity(0.25) : Color.gray.opacity(0.1))
                     )
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(selectedID == segment.id ? Color.gray.opacity(0.4) : Color.clear, lineWidth: 1.5)
+                            .stroke(selectedID == segment.id ? Color.teal.opacity(0.25) : Color.clear, lineWidth: 1.5)
                     )
                 }
                 .buttonStyle(.plain)

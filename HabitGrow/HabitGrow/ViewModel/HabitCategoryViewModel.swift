@@ -5,7 +5,7 @@
 //  Created by Praveen Kumar Vedanti on 6/27/25.
 //
 
-import Foundation
+import SwiftUI
 
 class HabitCategoryViewModel: ObservableObject {
     
@@ -36,6 +36,33 @@ class HabitCategoryViewModel: ObservableObject {
             }
         } catch {
             print("Failed to get catgories: \(error)")
+        }
+    }
+    
+    func setHabitColor(color: String) -> Color {
+        switch color {
+        case "teal":
+            return .teal
+        case "orange":
+            return .orange
+        case "green":
+            return .green
+        case "blue":
+            return .blue
+        case "purple":
+            return .purple
+        case "brown":
+            return .brown
+        case "red":
+            return .red
+        case "cyan":
+            return .cyan
+        case "yellow":
+            return .yellow
+        case "mint":
+            return .mint
+        default:
+            return .gray
         }
     }
 }

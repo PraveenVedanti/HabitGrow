@@ -55,7 +55,11 @@ struct HabitView: View {
         NavigationStack {
             List(categoriesViewModel.selectedCategory?.habits ?? []) { habit  in
                 NavigationLink(destination: HabitDetailView(habit: habit)) {
-                    ListStandardRow(title: habit.name, imageName: habit.imageName)
+                    ListStandardRow(
+                        title: habit.name,
+                        imageName: habit.imageName,
+                        imageColor: categoriesViewModel.setHabitColor(color: habit.color)
+                    )
                 }
             }
             .listRowSpacing(12.0)

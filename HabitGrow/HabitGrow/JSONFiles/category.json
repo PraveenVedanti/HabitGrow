@@ -8,17 +8,20 @@
             {
                 "id": 101,
                 "name": "Walking",
-                "imageName": "figure.walk"
+                "imageName": "figure.walk",
+                "color": "cyan"
             },
             {
                 "id": 102,
                 "name": "Running",
-                "imageName": "figure.run"
+                "imageName": "figure.run",
+                "color": "mint"
             },
             {
                 "id": 103,
                 "name": "Cycling",
-                "imageName": "bicycle"
+                "imageName": "bicycle",
+                "color": "red"
             }
         ]
     },
@@ -31,52 +34,62 @@
             {
                 "id": 201,
                 "name": "Walking",
-                "imageName": "figure.walk"
+                "imageName": "figure.walk",
+                "color": "cyan"
             },
             {
                 "id": 202,
                 "name": "Running",
-                "imageName": "figure.run"
+                "imageName": "figure.run",
+                "color": "mint"
             },
             {
                 "id": 203,
                 "name": "Cycling",
-                "imageName": "figure.outdoor.cycle"
+                "imageName": "figure.outdoor.cycle",
+                "color": "red"
             },
             {
                 "id": 204,
                 "name": "Swim",
-                "imageName": "figure.pool.swim"
+                "imageName": "figure.pool.swim",
+                "color": "blue"
             },
             {
                 "id": 205,
                 "name": "Yoga",
-                "imageName": "figure.yoga"
+                "imageName": "figure.yoga",
+                "color": "orange"
             },
             {
                 "id": 206,
                 "name": "Basketball",
-                "imageName": "figure.basketball"
+                "imageName": "figure.basketball",
+                "color": "purple"
             },
             {
                 "id": 207,
                 "name": "Exercise",
-                "imageName": "dumbbell"
+                "imageName": "dumbbell",
+                "color": "orange"
             },
             {
                 "id": 208,
                 "name": "Hiking",
-                "imageName": "figure.hiking"
+                "imageName": "figure.hiking",
+                "color": "brown"
             },
             {
                 "id": 209,
                 "name": "Surfing",
-                "imageName": "figure.surfing"
+                "imageName": "figure.surfing",
+                "color": "blue"
             },
             {
                 "id": 210,
                 "name": "Skis",
-                "imageName": "skis"
+                "imageName": "skis",
+                "color": "orange"
             }
         ]
     },
@@ -89,22 +102,26 @@
             {
                 "id": 301,
                 "name": "Read a book",
-                "imageName": "book"
+                "imageName": "book",
+                "color": "orange"
             },
             {
                 "id": 302,
                 "name": "Take medicines",
-                "imageName": "pill"
+                "imageName": "pill",
+                "color": "teal"
             },
             {
                 "id": 303,
                 "name": "Drink water",
-                "imageName": "waterbottle"
+                "imageName": "waterbottle",
+                "color": "blue"
             },
             {
                 "id": 304,
                 "name": "Cooking",
-                "imageName": "frying.pan"
+                "imageName": "frying.pan",
+                "color": "green"
             }
         ]
     }

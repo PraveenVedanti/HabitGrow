@@ -9,18 +9,35 @@ import SwiftUI
 
 struct HabitDetailView: View {
     let habit: Habit
+    
+    @State private var habitName: String = ""
+    @State private var habitDescription: String = ""
+    @State private var habitCategory: String = ""
 
     var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: habit.imageName)
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
-
-            Text(habit.name)
-                .font(.largeTitle)
+        NavigationStack {
+            Form {
+                Section("General") {
+                    TextField(habit.name, text: $habitName)
+                    TextField("Description", text: $habitDescription)
+                    
+                    HStack {
+                        TextField("Category", text: $habitCategory)
+                            .textFieldStyle(.plain)
+                            .autocorrectionDisabled()
+                        
+                        Spacer()
+                        
+                        Button {
+                            
+                        } label: {
+                            Text("Details")
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                        }
+                    }
+                }
+            }
         }
-        .navigationTitle(habit.name)
-        .padding()
     }
 }

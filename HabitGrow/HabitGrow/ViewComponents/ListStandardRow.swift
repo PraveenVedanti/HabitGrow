@@ -12,15 +12,18 @@ public struct ListStandardRow: View {
     private let title: String?
     private let detail: String?
     private let imageName: String?
+    private let imageColor: Color?
     
     public init(
         title: String? = nil,
         detail: String? = nil,
         imageName: String? = nil,
+        imageColor: Color? = nil
     ) {
         self.title = title
         self.detail = detail
         self.imageName = imageName
+        self.imageColor = imageColor
     }
     
     public var body: some View {
@@ -32,6 +35,7 @@ public struct ListStandardRow: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 20, height: 20)
+                        .foregroundStyle(imageColor ?? Color.gray)
                 }
                 
                 if let title {
